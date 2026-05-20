@@ -1,0 +1,49 @@
+# --- Python Base ---
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# --- Virtual Environments (البيئة الافتراضية) ---
+# بيلغي رفع الفولدر اللي أنت واقف عليه أو أي اسم مشهور للـ venv
+venv/
+.venv/
+ENV/
+env/
+ENV2/
+
+# --- Django Specific ---
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# --- Environment Variables (الملفات السرية) ---
+.env
+.venv
+.ini
+.secrets
+
+# --- Editors & OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

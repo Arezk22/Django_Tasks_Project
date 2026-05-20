@@ -1,0 +1,18 @@
+{% extends 'tasks/base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-5 text-center">
+    <div class="card p-5">
+      <i class="bi bi-exclamation-triangle text-danger display-1 mb-3"></i>
+      <h3 class="mb-3">Are You Sure..?</h3>
+      <p class="text-muted">you will delete <strong>"{{ object.title }}"</strong> task</p>
+      <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger px-5 rounded-pill me-2">Yes</button>
+        <a href="{% url 'task_details' task.id %}" class="btn btn-secondary px-5 rounded-pill">No</a>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

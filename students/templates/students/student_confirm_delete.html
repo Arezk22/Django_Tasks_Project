@@ -1,0 +1,18 @@
+{% extends 'students/base.html' %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6 text-center">
+    <div class="card border-danger shadow">
+      <div class="card-body">
+        <h3 class="text-danger"></h3>
+        <p>Are you sure you want to delete this student <strong>"{{ student.f_name }}"</strong>?</p>
+        <form method="post">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-danger px-4">Yes</button>
+          <a href="{% url 'student_list' %}" class="btn btn-secondary px-4">No</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
